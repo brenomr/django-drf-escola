@@ -18,7 +18,7 @@ from django.urls import path
 from django.urls.conf import include
 from rest_framework import routers
 
-from escola.views import AlunosViewset, CursosViewset, MatriculasViewset, ListaMatriculasAlunoViewset
+from escola.views import AlunosViewset, CursosViewset, MatriculasViewset, ListaMatriculasAlunoViewset, ListaAlunosMatriculadosViewset
 
 
 router = routers.DefaultRouter()
@@ -30,5 +30,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
     path('aluno/<int:pk>/matriculas/', ListaMatriculasAlunoViewset.as_view()),
+    path('curso/<int:pk>/matriculas/', ListaAlunosMatriculadosViewset.as_view()),
     path('api-auth/', include('rest_framework.urls')),
 ]
