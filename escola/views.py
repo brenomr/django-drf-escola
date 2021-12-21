@@ -1,5 +1,5 @@
 from django.db.models import query
-from rest_framework import generics, serializers, viewsets
+from rest_framework import generics, viewsets
 from escola.models import Aluno, Curso, Matricula
 from escola.serializer import AlunoSerializer, CursoSerializer, ListaMatriculasAlunoSerializer, ListarAlunosMatriculadosSerializer, MatriculaSerializer
 
