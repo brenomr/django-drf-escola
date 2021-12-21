@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models.deletion import CASCADE
 
 class Aluno(models.Model):
   nome = models.CharField(max_length=100)
@@ -21,3 +22,13 @@ class Curso(models.Model):
 
   def __str__(self):
     return self.descricao
+
+class Matricula(models.Model):
+  PERIODO = (
+    ('M', 'Matutino'),
+    ('V', 'Vespertino'),
+    ('N', 'Noturno')
+  )
+  aluno = models.ForeignKey(Aluno, on_delete=CASCADE)
+  curso = models.ForeignKey(Curso, on_delete=CASCADE)
+  periodo = models.CharField(max_length=1, choices=PERIODO, blank=False, null=False, default='M')
