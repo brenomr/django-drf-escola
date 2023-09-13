@@ -30,7 +30,7 @@ Este projeto faz uso das seguintes tecnologias:
 
 ## 💻 Projeto
 
-O DRF-Escola é uma API para o simples gerenciamento de alunos, cursos, matrículas e clientes e foi desenvolvida com o propósito simples propósito de testar as funcionalidades do Django Rest Framework.
+O DRF-Escola é uma API para o simples gerenciamento de alunos, cursos, matrículas e clientes e foi desenvolvida com o simples propósito de testar as funcionalidades do Django Rest Framework.
 <br />
 <br />
 
